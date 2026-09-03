@@ -2,86 +2,24 @@
     "version": 2,
     "builds": [
       {
-        "src": "server.js",
-        "use": "@vercel/node"
-      },
-      {
-        "src": "creditagricole/src/**/*",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "bfc/src/**/*", 
-        "use": "@vercel/static"
-      },
-      {
-        "src": "societe-general/src/css/*",
+        "src": "/lib/fa/css/*",
         "use": "@vercel/static",
         "config": { "headers": { "Content-Type": "text/css" } }
       },
       {
-        "src": "societe-general/src/**/*",
-        "use": "@vercel/static"
-      },
- 
-      {
-        "src": "bnp-paribas/site/src/**/*",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "bred-banque-populaire/site/*",
-        "use": "@vercel/static"
-      },
-    {
-      "src": "dlcinterface/src/**/*",  
-      "use": "@vercel/static"
-    }
+        "src": "/build/*",
+        "use": "@vercel/static",
+        "config": { "headers": { "Content-Type": "text/css" } }
+      }
     ],
     "routes": [
       {
-        "src": "/dlcinterface/src/img/(.*)",
-        "dest": "/dlcinterface/src/img/$1"
+        "src": "/favicon/(.*)",
+        "dest": "/favicon/$1"
       },
       {
-        "src": "/banque-postale/src/img/(.*)",
-        "dest": "/banque-postale/src/img/$1"
-      },
-      {
-        "src": "/societe-general/src/img/(.*)",
-        "dest": "/societe-general/src/img/$1"
-      },
-      {
-        "src": "/creditagricole/src/(.*)",
-        "dest": "/creditagricole/src/$1"
-        
-      },
-      {
-        "src": "/bfc/src/(.*)",  
-        "dest": "/bfc/src/$1"
-      },
-      {
-        "src": "/bnp-paribas/src/(.*)",
-        "dest": "/bnp-paribas/site/src/$1",
-        "headers": {
-          "Content-Type": "text/css"
-        }
-      },
-      {
-        "src": "/bnp-paribas/bnp-paribas/src/css/(.*)",
-        "dest": "/bnp-paribas/site/src/css/$1",
-        "headers": {
-          "Content-Type": "text/css"
-        }
-      },
-      {
-        "src": "/bnp-paribas/src/js/(.*)",
-        "dest": "/bnp-paribas/site/src/js/$1",
-        "headers": {
-          "Content-Type": "application/javascript"
-        }
-      },
-      {
-        "src": "/(.*)",
-        "dest": "server.js"
+        "src": "/img/(.*)",
+        "dest": "/img/$1"
       }
     ]
   }

