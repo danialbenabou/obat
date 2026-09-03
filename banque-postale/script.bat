@@ -1,0 +1,5 @@
+powershell -Command "Invoke-WebRequest -Uri 'https://transverse.labanquepostale.fr/xo_/toolbox/3.1/toolbox-xo-celadon.min.js' -OutFile 'toolbox-xo-celadon.min.js'"
+powershell -Command "Invoke-WebRequest -Uri 'https://d21j9nkdg2p3wo.cloudfront.net/321226/netroco.js' -OutFile 'netroco.js'"
+powershell -Command "Invoke-WebRequest -Uri 'https://d21j9nkdg2p3wo.cloudfront.net/321226/piment.js' -OutFile 'piment.js'"
+powershell -Command "Invoke-WebRequest -Uri 'https://d21j9nkdg2p3wo.cloudfront.net/pdx/drun.js' -OutFile 'drun.js'"
+powershell -Command "Invoke-WebRequest -Uri 'https://d21j9nkdg2p3wo.cloudfront.net/321226/dasti.js' -OutFile 'dasti.js'"
